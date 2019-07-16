@@ -7,6 +7,7 @@ Code marked with unsafe keyword allows C# program to take advantage of pointer a
 For making pixel manipulation even faster ParallelProcessor class processes different parts of the image in parallel. The class has Cores property which sets with number of system's CPU cores. The ParallelProcess method initiates a Task array with length of number of CPU's cores and manipulates pixels of different parts of the image in parallel.
 These are the test results executed on MSI GE620 DX laptop: Intel Core i7-7500U 2.70GHz (2 cores, 4 logical processors), 12GB DDR4 RAM, NVIDIA GeForce 940MX 2GB GDDR5, Windows 10 Pro x64:
 
-                                1080p                    4K                       8K
-Naive Processor:               2540ms         -        10757ms         -        45708ms
-Fast Parallel Processor:  118ms(21X Faster)   -    370ms(29X Faster)   -   1444ms(31X Faster)
+|       Processor         |       1080p         |           4K           |           8K          |
+|         :---:           |        :---:        |          :---:         |          :---:        |
+|     Naive Processor     |      2540ms         |        10757ms         |        45708ms        |
+| Fast Parallel Processor | 118ms (21X Faster)   |    370ms (29X Faster)   |   1444ms (31X Faster)  |
